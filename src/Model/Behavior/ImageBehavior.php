@@ -336,15 +336,10 @@ class ImageBehavior extends Behavior
             }
 
             foreach ($field as $index => $image) {
-                /**
-                 * @var UploadedFile|string $image
-                 * @var Stream $stream
-                 */
                 $uploadeImage = null;
 
                 if ($image instanceof UploadedFile && $image->getError() === 0) { // server based file uploads
-                    $stream = $image->getStream();
-                    $uploadeImage = $this->_upload($image->getClientFilename(), $stream->getMetadata('uri'), false);
+                    $uploadeImage = $this->_upload($image->getClientFilename(), $image->getStream()->getMetadata('uri'), false);
                 } elseif (is_string($image)) { // any other 'path' based uploads
                     $uploadeImage = $this->_upload($image, $image, true);
                 }
