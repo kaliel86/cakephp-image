@@ -9,7 +9,11 @@
 		{
 			"name": "Jasper Smet",
 			"homepage": "https://github.com/josbeir/image/graphs/contributors"
-		}
+		},
+        {
+            "name": "Maxime CHENE",
+            "homepage" : "https://github.com/kaliel86/cakephp-image/graphs/contributors"
+        }
 	],
 	"extra": {
 			"installer-name": "Image"
