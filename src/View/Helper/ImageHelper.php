@@ -13,6 +13,7 @@
 
 namespace Image\View\Helper;
 
+use Cake\Datasource\EntityInterface;
 use Cake\ORM\Entity;
 use Cake\ORM\TableRegistry;
 use Cake\View\Helper;
@@ -82,7 +83,7 @@ class ImageHelper extends Helper
 
     /**
      * Return directory where image is located for given entity
-     * @param Cake\ORM\Entity $image Image entity
+     * @param EntityInterface $image Image entity
      * @return string        Base path
      */
     protected function _basePath($image)
@@ -101,7 +102,7 @@ class ImageHelper extends Helper
             $basePath = str_replace('\\', '/', $basePath); // replace backward slashes with forward
             $basePath = preg_replace('/\/+/', '/', $basePath); // convert multiple slashes into single
 
-            $basePath = $this->paths[$image->model] = $basePath . '/' . $table->getAlias() . '/';
+            $basePath = $this->paths[$image->model] = $basePath . '/' . strtolower($table->getAlias()) . '/';
         }
 
         return $basePath;
