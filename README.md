@@ -29,9 +29,9 @@ Install using composer
 
 And run `php composer.phar install`
 
-Enable the plugin by adding it to bootstrap.php
+Enable the plugin by adding it to Application.php, in bootstrap method :
 ```php
-Plugin::load('Image');
+$this->addPlugin('Image');
 ```
 
 Init the database table by using cakephp's migrations
