@@ -66,7 +66,7 @@ class ImageHelper extends Helper
 
     /**
      * Return the image url
-     * @param Cake\ORM\Entity $image Image entity
+     * @param \Cake\Datasource\EntityInterface $image Image entity
      * @param string $preset Optional name of the preset to return
      * @return string Url of the image
      */
@@ -83,7 +83,7 @@ class ImageHelper extends Helper
 
     /**
      * Return directory where image is located for given entity
-     * @param EntityInterface $image Image entity
+     * @param \Cake\Datasource\EntityInterface $image Image entity
      * @return string        Base path
      */
     protected function _basePath($image)
