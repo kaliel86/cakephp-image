@@ -47,15 +47,16 @@ bin/cake migrations migrate -p Image
 Enable the image behavior by adding it to the Table's initialize hook
 
 ```php
-	public function initialize(array $config) {
-		$this->addBehavior('Image.Image', [
-			'path' => WWW_ROOT . 'assets',
-			'fields' => [
-				'images' => 'many',
-				'main' => 'one'
-			],
-		]);
-	}
+public function initialize(array $config)
+{
+    $this->addBehavior('Image.Image', [
+        'path' => WWW_ROOT . 'assets',
+        'fields' => [
+            'images' => 'many',
+            'main' => 'one'
+        ],
+    ]);
+}
 ```
 
 ## Image presets
