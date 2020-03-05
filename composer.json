@@ -1,5 +1,5 @@
 {
-	"name": "josbeir/image",
+	"name": "kaliel/image",
 	"description": "CakePHP 4.0 Image upload behavior",
 	"type": "cakephp-plugin",
 	"keywords": ["cakephp", "image"],
