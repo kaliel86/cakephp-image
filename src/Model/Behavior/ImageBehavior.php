@@ -401,7 +401,7 @@ class ImageBehavior extends Behavior
                 $this->generatePresets($imageEntity);
             }
 
-            $entity->unsetProperty('_images');
+            $entity->unset('_images');
         }
     }
 
