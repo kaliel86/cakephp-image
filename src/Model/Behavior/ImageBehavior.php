@@ -383,6 +383,8 @@ class ImageBehavior extends Behavior
         }
 
         $entity->set('_images', $entities);
+        debug($entity);
+        die();
     }
 
     /**
